@@ -1,7 +1,7 @@
 ## unbind-inventory-items
 ### Unbind Inventory Items for CABAL ONLINE
 
-It's a TSQL system for unbind items of the players. Basically, the item will be removed from the character's inventory and a new item will be created, with modified binding properties. It is ready to be implemented on a website, admin panel or for manual execution in SQL itself.
+It's a TSQL system for unbind items of the players. Basically, the item will be removed from the character's inventory and a new item will be created and sent to him, with modified binding properties. It is ready to be implemented on a website, admin panel or for manual execution in SQL itself.
 
 ### Usage
 

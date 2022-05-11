@@ -7,6 +7,8 @@ It's a TSQL system for unbind items of the players. Basically, the item will be 
 
 Implement the tables that is in the **Tables** folder, or modify it by inserting _only the items that will be accepted by the system_. After that, restore all the scripts from the **Functions** folder and also from the **Procedures** folder.
 
+You can handle exceptions according to the returns commented in the `Cabal_Tool_Unbind_InventoryItem` procedure.
+
 To unbind a character's inventory item, run: `EXEC [Server01].[dbo].[cabal_tool_unbind_InventoryItem] '@CharacterIdx', '@ItemData'`
 
 To get the **@ItemData** with the command: `EXEC [Server01].[dbo].[cabal_tool_GetInventoryInfo] '@CharacterIdx'`

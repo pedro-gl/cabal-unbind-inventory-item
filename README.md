@@ -14,9 +14,10 @@ To get the **@ItemData** with the command: `EXEC [Server01].[dbo].[cabal_tool_Ge
 ### Usage Rules
 
 - Character account must be offline.
+- The item cannot be temporary.
+- The item must be bound to the character.
 - The item must be in the character's inventory.
 - The item to be unbinded must be present in the tables mentioned above.
-- The item must be bound to the character.
 - If the item is bound to the character, after unbind, it will have the property "bind when equip".
 - If the item is bound to the character, and has 1 slot extended, it will become bound to the account.
 

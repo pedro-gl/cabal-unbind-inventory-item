@@ -97,7 +97,7 @@ BEGIN
 	IF (@itemFound <= 0) BEGIN SELECT -12 RETURN; END;
 
 	-- get item enhant code
-	DECLARE @itemEnhantCode INT = ([dbo].[BinToInt](SUBSTRING(@itemData, 1, 5)) & 0x1e000);
+	DECLARE @itemEnhantCode INT = ([dbo].[BinToInt](SUBSTRING(@itemData, 1, 5)) & 0x1e000); /* or 0x28000 to work with +20 */
 
 	-- create new item id
 	DECLARE @newItemKind INT = @itemId + @itemEnhantCode;

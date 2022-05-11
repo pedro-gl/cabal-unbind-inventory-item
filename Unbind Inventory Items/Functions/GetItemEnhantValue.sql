@@ -15,5 +15,5 @@ ALTER FUNCTION [dbo].[GetItemEnchantValue]
 RETURNS int
 AS
 BEGIN
-	RETURN ([dbo].[BinToInt](SUBSTRING(@itemData, 1, 5)) & 0x1e000) / 8192;
+	RETURN ([dbo].[BinToInt](SUBSTRING(@itemData, 1, 5)) & 0x1e000) / 8192; /* 0x28000 to work with +20 */
 END

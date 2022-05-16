@@ -8,7 +8,7 @@ GO
 -- Author:		<Pedro-GL>
 -- Create date: <2022-07-21>
 -- =============================================
-ALTER PROCEDURE [dbo].[cabal_tool_unbind_InventoryItem]
+CREATE PROCEDURE [dbo].[cabal_tool_unbind_InventoryItem]
 (
 	@characterIdx INT,
 	@itemData VARBINARY(18)

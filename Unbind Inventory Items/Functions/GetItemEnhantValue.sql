@@ -8,7 +8,7 @@ GO
 -- Author:		<Pedro-GL>
 -- Create date: <2022-07-21>
 -- =============================================
-ALTER FUNCTION [dbo].[GetItemEnchantValue]
+CREATE FUNCTION [dbo].[GetItemEnchantValue]
 (
 	@itemData varbinary(18)
 )

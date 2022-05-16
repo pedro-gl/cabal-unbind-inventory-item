@@ -6,7 +6,7 @@ GO
 SET QUOTED_IDENTIFIER ON
 GO
 
-ALTER PROCEDURE [dbo].[cabal_tool_GetInventoryInfo] (@CharacterIdx int)
+CREATE PROCEDURE [dbo].[cabal_tool_GetInventoryInfo] (@CharacterIdx int)
 
 AS
 BEGIN

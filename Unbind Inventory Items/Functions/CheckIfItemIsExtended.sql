@@ -8,7 +8,7 @@ GO
 -- Author:		<Pedro-GL>
 -- Create date: <2022-07-21>
 -- =============================================
-ALTER FUNCTION [dbo].[checkIfItemIsExtended] 
+CREATE FUNCTION [dbo].[checkIfItemIsExtended] 
 (
 	@itemData varbinary(18)
 )

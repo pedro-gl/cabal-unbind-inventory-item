@@ -105,7 +105,7 @@ BEGIN
 	-- check item properties
 	DECLARE @isExt INT = [dbo].[checkIfItemIsExtended](@itemData);
 	
-	-- create new item id
+	-- add new bind value to the new item id
 	SET @newItemKind = CASE
 		WHEN @isExt = 0 THEN @newItemKind + 1572864 /* 1572864 = bind when equip */
 		WHEN @isExt = 1 THEN @newItemKind + 4096    /* 4096 = bind to account */

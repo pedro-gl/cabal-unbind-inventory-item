@@ -1,19 +1,32 @@
-## unbind-inventory-items
-### Unbind Inventory Items for CABAL ONLINE
+## Unbind Inventory Items for CABAL ONLINE
 
-It's a TSQL system for unbind items of the players. Basically, the item will be removed from the character's inventory and a new item will be created and sent to him, with modified binding properties.
+### What does it do?
+
+Basically, the item will be removed from the character's inventory and a new item will be created and sent to him, with modified binding properties.
 
 ### Usage
 
-Implement the tables that is in the **Tables** folder, or modify it by inserting _only the items that will be accepted by the system_. After that, restore all the scripts from the **Functions** folder and also from the **Procedures** folder.
+Implement the tables that is in the Tables folder, or modify it by inserting **only the items that will be accepted by the system**. After that, restore all the scripts from the Functions folder and also from the Procedures folder.
 
-You can handle exceptions according to the returns commented in the `Cabal_Tool_Unbind_InventoryItem` procedure.
+You can handle exceptions according to the returns commented in the `cabal_tool_unbind_inventoryItem` procedure.
 
-To unbind a character's inventory item, run: `EXEC [Server01].[dbo].[cabal_tool_unbind_InventoryItem] '@CharacterIdx', '@ItemData'`
+<p>&nbsp;</p>
 
-To get the **@ItemData** with the command: `EXEC [Server01].[dbo].[cabal_tool_GetInventoryInfo] '@CharacterIdx'`
+To unbind a character's inventory item, run: 
+```sql
+EXEC [Server01].[dbo].[cabal_tool_unbind_InventoryItem] '@CharacterIdx', '@ItemData'
+```
 
-### Usage Rules
+<p>&nbsp;</p>
+
+Get `@ItemData` with the command:
+```sql
+EXEC [Server01].[dbo].[cabal_tool_GetInventoryInfo] '@CharacterIdx'
+```
+
+<p>&nbsp;</p>
+
+### Conditions
 
 - Character account must be offline.
 - The item cannot be temporary.
@@ -23,6 +36,6 @@ To get the **@ItemData** with the command: `EXEC [Server01].[dbo].[cabal_tool_Ge
 - If the item is bound to the character, after unbind, it will have the property "bind when equip".
 - If the item is bound to the character, and has 1 slot extended, it will become bound to the account.
 
-### Pictures
+### Video Demo
 
 { ... }

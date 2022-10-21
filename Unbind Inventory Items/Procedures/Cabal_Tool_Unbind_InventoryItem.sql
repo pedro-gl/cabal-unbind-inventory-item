@@ -97,7 +97,7 @@ BEGIN
 	IF (@itemFound <= 0) BEGIN SELECT -12 RETURN; END;
 
 	-- get item enhant code
-	DECLARE @itemEnhantCode INT = [dbo].[GetItemEnchantValue](@itemData);
+	DECLARE @itemEnhantCode INT = [dbo].[GetItemEnchantValue](@itemData) * 8192;
 
 	-- create new item id
 	DECLARE @newItemKind INT = @itemId + @itemEnhantCode;

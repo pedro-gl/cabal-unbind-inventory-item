@@ -79,7 +79,7 @@ BEGIN
 	IF (@@ROWCOUNT <= 0) BEGIN SELECT -9 RETURN; END;
 
 	-- get inventory data
-	DECLARE @inventoryData VARBINARY(512);
+	DECLARE @inventoryData VARBINARY(8000);
 	SELECT @inventoryData=[Data] FROM [dbo].[cabal_Inventory_table] WHERE CharacterIdx=@characterIdx;
 	IF (@@ROWCOUNT <= 0) BEGIN SELECT -10 RETURN; END;
 	IF (@inventoryData = 0x) BEGIN SELECT -11 RETURN; END;
@@ -112,7 +112,7 @@ BEGIN
 	END;
 
 	-- remove old item from inventory data
-	SET @inventoryData = CONVERT(VARBINARY(512), REPLACE(@inventoryData, @itemData, 0x))
+	SET @inventoryData = CONVERT(VARBINARY(8000), REPLACE(@inventoryData, @itemData, 0x))
 
 	-- lock account
 	UPDATE [Account].[dbo].[cabal_auth_table] SET AuthType=2 WHERE UserNum=@userNum;

@@ -11,7 +11,7 @@ CREATE PROCEDURE [dbo].[cabal_tool_GetInventoryInfo] (@CharacterIdx int)
 AS
 BEGIN
 
-DECLARE @inv_data varbinary(512),
+DECLARE @inv_data varbinary(8000),
 		@item_data varbinary(18),
 		@item_data2 varbinary(12),
 		@item_name varchar(100),
